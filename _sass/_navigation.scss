@@ -1,0 +1,136 @@
+@import "base";
+
+////////////////////////////////////
+// Remove with Reset //////////////
+//////////////////////////////////
+
+.headerNav ul  {
+	list-style: none;
+	padding: 0;
+}
+
+////////////////////////////////////
+// nav toggle styles //////////////
+//////////////////////////////////
+
+.navToggle {
+	background: $mainColor;
+	bottom: 0;
+	cursor: pointer;
+	display: block;
+	opacity: 0.5;
+	padding: 0.5em;
+	position: fixed;
+	right: 0;
+	@include single-trans(all, 0.35s, ease);
+	@include bp(medium) {
+		bottom: auto;
+		top: 0;
+	}
+
+	.toggleSVG {
+		position: relative;
+		-webkit-transform:rotateZ(0deg);
+		   -moz-transform:rotateZ(0deg);
+			-ms-transform:rotateZ(0deg);
+		     -o-transform:rotateZ(0deg);
+		        transform:rotateZ(0deg);
+		top: 0;
+		@include single-trans(all, 0.35s, ease);
+	}
+
+	&.active {
+		background: darken($mainColor, 4%);
+		opacity: 1;
+		@include single-trans(all, 0.35s, ease);
+		@include bp(small) {
+			background: $mainColor;
+		}
+
+		.toggleSVG {
+			-webkit-transform:rotateZ(135deg);
+			   -moz-transform:rotateZ(135deg);
+				-ms-transform:rotateZ(135deg);
+			     -o-transform:rotateZ(135deg);
+			        transform:rotateZ(135deg);
+			top: 4px;
+			@include single-trans(all, 0.325s, ease);
+		}
+	}
+
+	&:hover { opacity: 1; }
+}
+
+
+
+////////////////////////////////////
+// navigation styles //////////////
+//////////////////////////////////
+
+.headerNav {
+	background: $mainColor;
+	font-size: 1rem;
+	height: 100%;
+	max-width: 400px;
+	padding: 1em 0;
+	position: fixed;
+	right: -100%;
+	text-align: center;
+	top: 0;
+	width: 100%;
+	@include single-trans(all, 0.35s, ease-in-out);
+	z-index: $zOverlayContent;
+	@include bp(small) {
+		width: 20%;
+		padding-top: 3em;
+	}
+
+	ul {
+		border-top: 1px solid lighten($mainColor, 10%);
+		border-bottom: 1px solid lighten($mainColor, 10%);
+
+		li:nth-of-type(even) {
+			border-top: 1px solid lighten($mainColor, 10%);
+			border-bottom: 1px solid lighten($mainColor, 10%);
+		}
+	}
+}
+
+.vectorMe {
+	margin: 0 auto;
+	@include bp(small) {
+		margin: 1em auto;
+	}
+	.vectorMeWrap & { padding: 0 1.5em; }
+}
+
+.navLinks {
+	background: $mainColor;
+	border-top: 1px solid transparent;
+	color: #fff;
+	display: block;
+	left: 0;
+	padding: 1em 0;
+	position: relative;
+	text-decoration: none;
+	width: 100%;
+	@include single-trans(all, 0.25s, ease);
+
+	&:hover, &:active {
+		background: darken($mainColor, 10%);
+		border-top: 1px solid darken($mainColor, 13%);
+		box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+		@include single-trans(all, 0.25s, ease);
+	}
+}
+
+
+////////////////////////////////////
+//  opened styles /////////////////
+//////////////////////////////////
+
+.headerNav.open {
+	right: 0;
+	@include single-trans(all, 0.35s, ease-in-out);
+
+}

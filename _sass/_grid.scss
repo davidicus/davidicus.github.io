@@ -1,0 +1,23 @@
+$col-width    : 65px;
+$gutter-width : 20px;
+$columns      : 12;
+
+@for $i from 1 through $columns {
+		
+	// Set container width relative to user variables
+	$width: ($col-width * $columns) + ($gutter-width * ($columns - 1));
+
+	// First, calculate grid size in pixels
+	$grid: ($col-width * $i) + ($gutter-width * ($i - 1));
+
+	// Then, calculate the responsive grid 
+	$grid: ($grid / $width) * 100%;
+
+	// Generate the grid classes
+	.grid-#{$i} {
+	    width: 100%;
+	    @media (min-width: 46em) {
+			width: $grid;
+	    }
+	}
+}

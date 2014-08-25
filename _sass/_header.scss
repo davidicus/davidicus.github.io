@@ -1,0 +1,97 @@
+@import "base";
+@import "navigation";
+
+header {
+	font-size: 1rem;
+	margin-bottom: 1.5em;
+	padding-top: 1.5em;
+	text-align: center;
+	width: 100%;
+
+	@include rbp(640) {
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: $zOverlay;
+	}
+	
+	.logoLink {
+		color: $darkGrey;
+		display: inline-block;
+		font-family: $orb;
+		overflow: hidden;
+		position: relative;
+		text-decoration: none;
+		vertical-align: top;
+
+		@include bp(medium) {
+			padding: .5em 0;
+		}
+		
+		.path{
+			stroke-dasharray: 333.213;
+			stroke-dashoffset: -333.213;
+			/*animation*/
+			@include dash;
+			@include single-trans(all, 400ms, ease-in, 0ms);	
+		}
+		 
+		&:hover {
+			.path {
+				fill: $mainColor;
+				stroke: #fff;
+			}
+		}
+
+		hr {
+			margin-bottom: 0;
+		}
+	}	
+	
+}
+
+////////////////////////////////////
+// Keyframes ////////////////////
+//////////////////////////////////
+
+//logo svg animation
+
+@-webkit-keyframes dash {
+	from {
+		stroke-dashoffset: 333.213;
+	}
+	to {
+		stroke-dashoffset: 0; 
+	}
+}
+
+@-moz-keyframes dash {
+	from {
+		stroke-dashoffset: 333.213;
+	}
+	to {
+		stroke-dashoffset: 0; 
+	}
+}
+
+@-ms-keyframes dash {
+	from {
+		stroke-dashoffset: 333.213;
+	}
+	to {
+		stroke-dashoffset: 0; 
+	}
+}
+
+
+
+@keyframes dash {
+	from {
+		stroke-dashoffset: 333.213;
+	}
+	to {
+		stroke-dashoffset: 0; 
+	}
+}
+
+

@@ -1,0 +1,75 @@
+//////////////////////////////////
+//mixins //////////////////
+////////////////////////////////
+
+//media break points
+@mixin bp($point) {
+	@if $point == xSmall {
+	@media (min-width: 400px) { @content; }
+	}
+	@if $point == small {
+	@media (min-width: 600px) { @content; }
+	}
+	@else if $point == medium {
+	@media (min-width: 768px) { @content; }
+	}
+	@else if $point == large {
+	@media (min-width: 1024px)  { @content; }
+	}
+	@else if $point == xLarge {
+	@media (min-width: 1280px)  { @content; }
+	}
+}
+
+@mixin rbp($point) {
+	@media (min-width: #{$point}px) { @content; }
+}
+
+//transition vender prefix
+@mixin single-trans($what, $sec, $ease, $delay: 0 ) {
+	-webkit-transition: $what $sec $ease $delay;
+	-moz-transition: $what $sec $ease $delay;
+	transition: $what $sec $ease $delay;
+}
+
+@mixin bounce() {
+	-webkit-animation-timing-function: cubic-bezier(0.6,1.5,0.6,1);
+	-moz-animation-timing-function: cubic-bezier(0.6,1.5,0.6,1);
+	animation-timing-function: cubic-bezier(0.6,1.5,0.6,1);
+}
+
+@mixin partAnim($num) {
+	-webkit-animation: animPart#{$num} 6s infinite;
+	-moz-animation: animPart#{$num} 6s infinite;
+	animation: animPart#{$num} 6s infinite;
+}
+
+@mixin code {
+	-webkit-animation: code 6s infinite;
+	-moz-animation: code 6s infinite;
+	animation: code 6s infinite;
+}
+
+@mixin dash {
+	-webkit-animation:dash 4.5s linear forwards;
+	-moz-animation:dash 4.5s linear forwards;
+	animation:dash 4.5s linear forwards;
+}
+
+@mixin trans($cord, $cord2) {
+  -webkit-transform: translate($cord, $cord2);
+  -ms-transform: translate($cord, $cord2);
+  transform: translate($cord, $cord2);
+}
+
+@mixin keyframes($animationName) {
+    @-webkit-keyframes $animationName {
+        @content;
+    }
+    @-moz-keyframes $animationName {
+        @content;
+    }
+    @keyframes $animationName {
+        @content;
+    }
+}

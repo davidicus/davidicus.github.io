@@ -5,24 +5,127 @@
 //media break points
 @mixin bp($point) {
 	@if $point == xSmall {
-	@media (min-width: 400px) { @content; }
+		@media (min-width: 400px) { @content; }
 	}
-	@if $point == small {
-	@media (min-width: 600px) { @content; }
+	@else if $point == small {
+		@media (min-width: 600px) { @content; }
 	}
 	@else if $point == medium {
-	@media (min-width: 768px) { @content; }
+		@media (min-width: 768px) { @content; }
 	}
 	@else if $point == large {
-	@media (min-width: 1024px)  { @content; }
+		@media (min-width: 1024px)  { @content; }
 	}
 	@else if $point == xLarge {
-	@media (min-width: 1280px)  { @content; }
+		@media (min-width: 1280px)  { @content; }
 	}
 }
 
 @mixin rbp($point) {
 	@media (min-width: #{$point}px) { @content; }
+}
+
+
+//css3
+@mixin background-size ($value) {
+  -webkit-background-size: $value;
+          background-size: $value;
+}
+
+@mixin border-radius ($values) {
+	-webkit-border-radius: $values;
+	   -moz-border-radius: $values;
+	        border-radius: $values;
+	-webkit-background-clip: padding-box; 
+	       -moz-background-clip: padding; 
+	        background-clip: padding-box;
+}
+
+@mixin box-shadow ($x, $y, $offset, $hex,  $inset: null, $spread:null) {
+     -moz-box-shadow: $x $y $offset $spread $hex $inset;
+  -webkit-box-shadow: $x $y $offset $spread $hex $inset;
+          box-shadow: $x $y $offset $spread $hex $inset;
+}
+
+@mixin box-sizing($value) {
+     -moz-box-sizing: $value;
+  -webkit-box-sizing: $value;
+          box-sizing: $value;
+}
+
+@mixin rgba-bg ($hex, $alpha) {     
+	background-color: $hex;
+	background-color: rgba($hex, $alpha);
+}
+
+@mixin transition ($value) {
+     -moz-transition: $value;
+       -o-transition: $value;
+      -ms-transition: $value;
+  -webkit-transition: $value;
+          transition: $value;
+}
+
+//common use
+@mixin reset {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+@mixin zipMP {
+	margin: 0;
+	padding: 0;
+}
+
+//cover everything block
+@mixin coverPage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+//center
+@mixin centerIt {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform:translate(-50%, -50%);
+   -moz-transform:translate(-50%, -50%);
+    -ms-transform:translate(-50%, -50%);
+     -o-transform:translate(-50%, -50%);
+        transform:translate(-50%, -50%);
+}
+
+//ellipsis
+@mixin ellipsis() {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+//standard Wrapper padding 
+@mixin pads {
+	padding: 0 1.618em;
+
+	@include bp(medium) {
+		padding: 0 2.618em;
+	}
+}
+
+@mixin cf {
+	&:after,
+	&:before {
+		content: "";
+		display: table;
+		clear: both;
+	}
 }
 
 //transition vender prefix

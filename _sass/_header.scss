@@ -4,16 +4,9 @@
 header {
 	font-size: 1rem;
 	margin-bottom: 1.5em;
-	padding-top: 1.5em;
+	padding-top: 1em;
 	text-align: center;
 	width: 100%;
-
-	@include rbp(640) {
-		position: absolute;
-		top: 0;
-		left: 0;
-		z-index: $zOverlay;
-	}
 	
 	.logoLink {
 		color: $darkGrey;
@@ -44,10 +37,20 @@ header {
 		}
 
 		hr {
-			margin-bottom: 0;
+			margin: 0.5em 0 0;
+			border: 1px solid;
 		}
 	}	
 	
+}
+
+.home header {
+	@media (min-height: 551px) {
+		left: 0;
+		position: absolute;
+		top: 0;
+		z-index: $zOverlay;
+	}
 }
 
 ////////////////////////////////////

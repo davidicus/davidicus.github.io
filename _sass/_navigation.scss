@@ -85,9 +85,11 @@
 		padding-top: 3em;
 	}
 
+
 	ul {
 		border-top: 1px solid lighten($mainColor, 10%);
 		border-bottom: 1px solid lighten($mainColor, 10%);
+		
 
 		li:nth-of-type(even) {
 			border-top: 1px solid lighten($mainColor, 10%);
@@ -133,4 +135,16 @@
 	right: 0;
 	@include single-trans(all, 0.35s, ease-in-out);
 
+	@media (min-width: 600px) and (max-height: 341px) {
+		width: 50%;
+		padding-top: 0;
+	}
+	
+}
+
+.open .vectorMeWrap {
+	@media (max-height: 347px) {
+		width: 100px;	
+		margin: 0 auto;	
+	}	
 }

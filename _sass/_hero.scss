@@ -5,41 +5,21 @@
 // Hero styles ////////////////////
 //////////////////////////////////
 
-.hero {
-	display: table;
-	height: 100%;
-	overflow: hidden;
-	position: relative;
-	width: 100%;
-
-	@media (max-height: 640px) {
-		display: block;
-	}
-}
 
 .heroWrap {
-	display: table-cell;
-	left: 0;
-	margin: 0 auto;
-	max-width: 1280px;
-	position: relative;
-	text-align: center;
-	vertical-align: middle;
-	width: 100%;
-	z-index: $zNormal;
-
-	@media (max-height: 640px) {
-		display: block;
-	}
 
 	.heroText {
 		margin: 1em 0;
 		overflow: hidden;
+		@include rbp(565) {
+			font-size: 1.5rem;
+		}
 		@include bp(medium) {
 			display: inline-block;
 			text-align: center;
 			vertical-align: baseline;
 			width: 100%;
+			font-size: 1em;
 		}
 	}
 
@@ -93,7 +73,7 @@
 	display: block;
 	font-weight: 300;
 	font-size: .8em;
-	margin: 0 auto 1em;
+	margin: 0 auto 3em;
 	max-width: 240px;
 	padding: 1em .25em;
 	position: relative;
@@ -103,7 +83,7 @@
 
 	@include bp(medium) {
 		font-size: .7em;
-		margin: 6em auto 0;
+		margin: 2em auto;
 	}
 
 	&:hover {
@@ -121,7 +101,7 @@
 .socialWrap {
 		display: block;
 		width: 100%;
-		@include rbp(640) {
+		@media (min-width: 640px) and (min-height: 552px) {
 			bottom: 0;
 			left: 50%;
 			position: absolute;

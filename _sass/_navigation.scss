@@ -14,7 +14,7 @@
 //////////////////////////////////
 
 .navToggle {
-	background: $mainColor;
+	background: $red;
 	bottom: 0;
 	cursor: pointer;
 	display: block;
@@ -99,10 +99,8 @@
 }
 
 .vectorMe {
-	margin: 0 auto;
-	@include bp(small) {
-		margin: 1em auto;
-	}
+	margin: 1em auto;
+	
 	.vectorMeWrap & { padding: 0 1.5em; }
 }
 

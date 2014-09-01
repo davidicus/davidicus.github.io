@@ -129,7 +129,7 @@
 }
 
 //transition vender prefix
-@mixin single-trans($what, $sec, $ease, $delay: 0 ) {
+@mixin single-trans($what, $sec, $ease, $delay: 0) {
 	-webkit-transition: $what $sec $ease $delay;
 	-moz-transition: $what $sec $ease $delay;
 	transition: $what $sec $ease $delay;
@@ -151,6 +151,12 @@
 	-webkit-animation: code 6s infinite;
 	-moz-animation: code 6s infinite;
 	animation: code 6s infinite;
+}
+
+@mixin pulse {
+	-webkit-animation: pulse 3s infinite;
+	-moz-animation: pulse 3s infinite;
+	animation: pulse 3s infinite;
 }
 
 @mixin dash {

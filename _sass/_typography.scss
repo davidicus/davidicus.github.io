@@ -1,0 +1,96 @@
+@import "base";
+
+
+////////////////////////////////////
+// Typograhpy styles //////////////
+//////////////////////////////////
+
+html,
+body  {
+	font-family: $source;
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 1.45;
+
+	@include bp(medium) {
+		font-weight: 300;
+	}
+}
+
+section {
+
+	@include rbp(565) {
+		font-size: 1.15rem;
+	}
+	@include bp(medium) {
+		font-size: 1.25rem;
+	}
+	@include bp(large) {
+		font-size: 1.5rem;
+	}
+}
+
+.pageWrap .hero {
+	@include rbp(568) { font-size: 1.5rem; }	
+
+	@include bp(large) { font-size: 1.75rem; }
+}
+
+.pageWrap .recentSection {
+	@include rbp(800) { font-size: 1rem; }	
+
+	@include bp(large) { font-size: 1.25rem; }
+
+	@include bp(xLarge) { font-size: 1.5rem; }
+}
+
+%headline {
+	font-family: $lato;
+	font-weight: 900;
+	line-height: 1.2;
+	margin: 1.414em 0 0.5em;
+}
+
+h1 {
+	@extend %headline;
+	margin-top: 0.5em;
+	font-size: 1.77em;
+
+	@include bp(medium) { font-size: 2.369em; }
+}
+
+h2 {
+	@extend %headline;
+	font-size: 1.333em;
+
+	@include bp(medium) { font-size: 1.777em; }
+}
+
+h3 {
+	@extend %headline;
+	font-size: 1em;
+
+	@include bp(medium) { font-size: 1.333em; }
+}
+
+p { 
+	font-size: 1em;
+	margin-bottom: 1.3em; 
+}
+
+a {
+	color: $mainColor;
+}
+
+.btn,
+.portfolio {
+	font-size: .8em;
+
+	@include rbp(568) { font-size: 0.9em; }
+
+	@include bp(large) { font-size: 0.65em; }
+}
+
+.portfolio {
+	@include rbp(568) { font-size: 0.7em; }
+}

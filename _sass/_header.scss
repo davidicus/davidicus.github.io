@@ -3,11 +3,12 @@
 
 header {
 	font-size: 1rem;
-	margin-bottom: 1.5em;
+	padding-bottom: 1.5em;
 	padding-top: 1em;
 	text-align: center;
 	width: 100%;
-	
+	background: url('/images/heroBg.jpg') repeat;
+
 	.logoLink {
 		color: $darkGrey;
 		display: inline-block;
@@ -45,7 +46,8 @@ header {
 }
 
 .home header {
-	@media (min-height: 551px) {
+	@media (min-height: 770px) {
+		background: none;
 		left: 0;
 		position: absolute;
 		top: 0;

@@ -59,7 +59,6 @@ $(function(){
 
 	//nav toggle
 	
-	
 	$('.navToggle').on('click', function() {
 		$(this).toggleClass('active');
 		setTimeout(function() {
@@ -67,6 +66,14 @@ $(function(){
 		}, 200);
 		return false;
 	});
+
+	//$('.contentWrap').addClass('fadedOut');
+
+	
+
+	setTimeout(function() {
+		$('.heroWrap').addClass('fadeIn').removeClass('fadedOut');
+	}, 800);
 	
 	
 	

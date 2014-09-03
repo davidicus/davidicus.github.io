@@ -32,6 +32,7 @@
 		text-shadow: 1px 1px 1px #333;
 		font-weight: 400;
 		text-align: left;
+		@include bp(medium) { text-align: center; }
 	}
 }
 

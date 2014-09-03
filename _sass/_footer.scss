@@ -4,8 +4,39 @@ footer {
 	background: #333;
 	color: #fff;
 	overflow: hidden;
+	position: relative;
+	text-align: center;
+	font-size: 0.85rem;
 
-	a {
+	a,
+	p,
+	.footerLogo {
 		color: #fff;
+		display: inline-block;
+		vertical-align: middle;
+	}
+
+	p { margin-bottom: 0; }
+
+	.footerLogo {
+		margin: .5em auto; 
+
+		a { max-width: 30px; }
+		
+		img {
+			vertical-align: top;
+		}
+	}
+
+	.footerSocial { 
+		position: relative;
+		display: inline-block;
+
+		a { 
+			max-width: 25px; 
+			margin-right: 1em;
+
+			&:last-child { margin-right: 0;}
+		}
 	}
 }

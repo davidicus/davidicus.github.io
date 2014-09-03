@@ -84,3 +84,17 @@ img {
     }
   }
 }
+
+
+.fadedOut {
+	position: relative;
+	top: 10%;
+	opacity: 0;
+	@include single-trans(all, 0.45s, linear);
+}
+
+.fadeIn {
+	top: 0;
+	opacity: 1;
+	@include single-trans(all, 0.45s, linear);
+}

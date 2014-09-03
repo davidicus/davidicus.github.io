@@ -71,9 +71,9 @@ $(function(){
 
 	
 
-	setTimeout(function() {
-		$('.heroWrap').addClass('fadeIn').removeClass('fadedOut');
-	}, 800);
+	//setTimeout(function() {
+	//	$('.heroWrap').addClass('fadeIn').removeClass('fadedOut');
+	//}, 800);
 	
 	
 	

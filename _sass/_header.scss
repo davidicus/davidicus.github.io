@@ -24,7 +24,7 @@ header {
 		
 		.path{
 			stroke-dasharray: 333.213;
-			stroke-dashoffset: -333.213;
+			stroke-dashoffset: 0;
 			/*animation*/
 			@include dash;
 			@include single-trans(all, 400ms, ease-in, 0ms);	

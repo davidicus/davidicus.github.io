@@ -40,12 +40,8 @@
 	}
 
 	&.active {
-		background: darken($red, 4%);
 		opacity: 1;
 		@include single-trans(all, 0.35s, ease);
-		@include bp(small) {
-			background: $red;
-		}
 
 		.toggleSVG {
 			-webkit-transform:rotateZ(135deg);
@@ -70,39 +66,38 @@
 .headerNav {
 	background: $red;
 	font-size: 1rem;
-	height: 100%;
-	max-width: 400px;
-	padding: 1em 0;
+	max-width: 381px;
 	position: fixed;
 	right: -100%;
 	text-align: center;
-	top: 0;
+	bottom: 0;
 	width: 100%;
+	padding-right: 54px;
 	@include single-trans(all, 0.35s, ease-in-out);
 	z-index: $zOverlayContent;
-	@include bp(small) {
-		width: 20%;
-		padding-top: 3em;
+	@include bp(medium) {
+		bottom: auto;
+		top: 0;
 	}
+
 
 
 	ul {
 		border-top: 1px solid lighten($red, 4%);
 		border-bottom: 1px solid lighten($red, 5%);
+		font-size: 0;
 		
 
-		li:nth-of-type(even) {
-			border-top: 1px solid lighten($red, 5%);
-			border-bottom: 1px solid lighten($red, 5%);
+		li {
+			display: inline-block;
+			width: 50%;
+			font-size: 1rem;
+			vertical-align: top;
 		}
 	}
 }
 
-.vectorMe {
-	margin: 1em auto;
-	
-	.vectorMeWrap & { padding: 0 1.5em; }
-}
+
 
 .navLinks {
 	background: $red;
@@ -110,7 +105,7 @@
 	color: #fff;
 	display: block;
 	left: 0;
-	padding: 1em 0;
+	padding: 0.91em 0;
 	position: relative;
 	text-decoration: none;
 	width: 100%;
@@ -140,9 +135,3 @@
 	
 }
 
-.open .vectorMeWrap {
-	@media (max-height: 347px) {
-		width: 100px;	
-		margin: 0 auto;	
-	}	
-}

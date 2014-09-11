@@ -4,6 +4,7 @@ footer {
 	background: #333;
 	color: #fff;
 	overflow: hidden;
+	padding: 1em 0;
 	position: relative;
 	text-align: center;
 	font-size: 0.85rem;
@@ -19,9 +20,17 @@ footer {
 	p { margin-bottom: 0; }
 
 	.footerLogo {
-		margin: .5em auto; 
+		margin: 1em auto; 
+		@include bp(medium) { margin: 0; }
 
-		a { max-width: 30px; }
+		a { 
+			max-width: 30px; 
+			max-height: 35px; 
+			img {
+				width: 30px;
+				height: 34px;
+			}
+		}
 		
 		img {
 			vertical-align: top;

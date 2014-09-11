@@ -1,4 +1,4 @@
-
+var $recent = $('#recent');
 
 $(function(){
 
@@ -55,6 +55,15 @@ $(function(){
 		noKeyFrames();
 	 }
 	*/	
+
+	//portfolio scroll
+
+	$('.portfolio').on('click', function() {
+		$('html,body').animate({
+          scrollTop: $recent.offset().top
+        }, 1500);
+		return false;
+	});
 	
 
 	//nav toggle

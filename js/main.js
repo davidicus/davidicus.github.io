@@ -64,6 +64,19 @@ $(function(){
         }, 1500);
 		return false;
 	});
+
+	//add bg to inputs on blur if value is entered
+
+	$('input[type="text"], textarea').on('blur', function() {
+		var $this = $(this);
+		if(!$this.val()) {
+			$this.css('background', 'transparent');
+			$this.siblings('label').removeClass('filled');
+		} else {
+			$this.css('background', '#fff');
+			$this.siblings('label').addClass('filled');
+		}
+	});
 	
 
 	//nav toggle

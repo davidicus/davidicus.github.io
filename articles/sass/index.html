@@ -1,0 +1,60 @@
+---
+layout: blog
+---
+
+<div class="blog-pages">
+  <div class="blog-wrap post">
+
+    <section class="post-content">
+      <ul class="post-roll">
+      	{% for post in site.categories.sass %}
+      		<li class="post-item">
+            <a class="post-title" href="{{ post.url | prepend: site.baseurl }}">
+              <span class="post-img"><img src="/assets/{{ post.image }}"></span>
+              <h3>{{ post.title }}</h3>
+            </a>
+            <div class="post-meta">
+              <b class="post-author">{{ post.author }}</b>
+              <b class="post-sep">•</b>
+              <b class="post-date">{{ post.date | date: "%b %-d, %Y" }}</b>
+            </div>
+            {{ post.excerpt }}
+            <a class="btn" href="{{ post.url | prepend: site.baseurl }}">Read more</a>
+            <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://david-conner.com/{{ post.url}}" data-text="{{ post.title }}" data-via="Dave_Conner">Tweet</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+
+            <!-- Place this tag where you want the +1 button to render. -->
+            <div class="g-plusone" data-size="medium"></div>
+
+            <!-- Place this tag after the last +1 button tag. -->
+            <script type="text/javascript">
+              (function() {
+                var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+                po.src = 'https://apis.google.com/js/platform.js';
+                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+              })();
+            </script>
+
+
+          </li>
+        {% endfor %}
+      </ul>
+    </section><!--
+
+    --><aside class="post-sidebar sidebar">
+      
+      <div class="sidebar-catlist">
+        <h2>Catagories</h2>
+        <ul>
+          {% for cat in site.categories %}
+              <li><a href="/articles/{{ cat[0] }}">{{ cat[0] }}</a></li>
+          {% endfor %}
+        </ul>
+      </div>
+      {% include ads.html %}
+
+    </aside>
+
+
+  </div>
+</div>

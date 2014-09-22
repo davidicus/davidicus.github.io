@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  "Third Test Post"
+html_title: Third Test Post
 date:   September 21, 2014
 author: David Conner
 categories: web-design Sass

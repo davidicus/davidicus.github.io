@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  "Fourth Test Post"
+html_title: Four Test Post
 date:   September 21, 2014
 author: David Conner
 categories: web-design sass

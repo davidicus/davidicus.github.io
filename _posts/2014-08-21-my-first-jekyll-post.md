@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  "My Test Post"
+html_title: My Test Post
 date:   August 21, 2014
 author: David Conner
 categories: web-design javascript 

@@ -8,6 +8,7 @@
 	font-weight: 300;
 	max-width: 200px;
 	position: relative;
+  text-align: center;
 	text-decoration: none;
 	@include single-trans(all,400ms, linear, 0ms);
 
@@ -122,4 +123,14 @@
 	@include rbp(800) {
 		margin-bottom: 0;
 	}
+}
+
+/////////////////////////////
+// blog buttons ////////////
+///////////////////////////
+
+.post-roll .btn {
+  @include rbp(1024) {
+    font-size: 0.9em;
+  }
 }

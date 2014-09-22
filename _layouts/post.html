@@ -1,0 +1,46 @@
+---
+layout: blog
+comments: true
+---
+<div class="blog-pages">
+	<div class="blog-wrap post">
+
+    <article class="post-content">
+      <img class="post-img is-hidden-mobile" src="/assets/{{ page.image }}">
+
+      <header class="post-header">
+        <h1 class="headline-primary">{{ page.title }}</h1>
+        <div class="post-meta">
+          <b class="post-author">by {% if page.author %}{{ page.author }}{% endif %}</b>
+          <b class="post-sep">•</b>
+          <b class="post-date">{% if page.meta %}{{ page.meta }}{% endif %} 
+          {{ page.date | date: "%b %-d, %Y" }}</b>
+        </div>
+      </header>
+      
+      {{ content }}
+
+      <a href="https://twitter.com/share" class="twitter-share-button" data-via="Dave_Conner" data-size="large">Tweet this article</a>
+      <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+
+      <div class="post-comments">
+        {% include disqus.html disqus_identifier=page.disqus_identifier %}
+      </div>
+    </article><!--
+
+    --><aside class="post-sidebar sidebar">
+      
+      <div class="sidebar-catlist">
+        <h2>Catagories</h2>
+        <ul>
+          {% for cat in site.categories %}
+              <li><a href="/blog/{{ cat[0] }}">{{ cat[0] }}</a></li>
+          {% endfor %}
+        </ul>
+      </div>
+      {% include ads.html %}
+
+    </aside>
+
+	</div>
+</div>

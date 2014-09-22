@@ -1,5 +1,6 @@
 var $recent = $('#recent');
 
+
 $(function(){
 
 
@@ -89,13 +90,18 @@ $(function(){
 		return false;
 	});
 
-	//$('.contentWrap').addClass('fadedOut');
-
+	//shorten text and add elipse on blog roll
 	
-
-	//setTimeout(function() {
-	//	$('.heroWrap').addClass('fadeIn').removeClass('fadedOut');
-	//}, 800);
+	$('.post-item p').each(function() {
+		var $this = $(this);
+		var post = $this.text();
+		var maxLength = 150;
+		if (post.length > maxLength) {
+	        post = post.substr(0,maxLength-3) + "...";
+	    }
+	    $this.text(post);
+	    return post;
+	});
 	
 	
 	

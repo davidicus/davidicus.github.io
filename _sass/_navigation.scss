@@ -143,10 +143,14 @@
 //////////////////////////////////
 
 .blog .blogNav {
-	border-bottom: 1px solid $red;
+	@include bp(medium) {
+		border-bottom: 1px solid $red;
+	}
 
 	.navToggle {
-		border-bottom: 1px solid $red;
+		@include bp(medium) {
+			border-bottom: 1px solid $red;
+		}
 	}
 }
 
@@ -192,7 +196,7 @@
 		}
 	}
 
-	&:hover {
+	&:hover, &:active {
 		.cats {
 			opacity: 1;
 			bottom: 100%;
@@ -204,4 +208,14 @@
 		}
 	}
 
+}
+
+.catagories .cats {
+	opacity: 1;
+	bottom: 100%;
+	@include single-trans(all, 0.25s, ease, 0.4s);
+	@include bp(medium) {
+		top: 100%;
+		bottom: auto;
+	}
 }

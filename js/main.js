@@ -90,6 +90,14 @@ $(function(){
 		return false;
 	});
 
+	//toggle cats menu
+	
+	$('.catLink').on('click', function() {
+		$(this).toggleClass('catagory');
+		
+		return false;
+	});
+
 	//shorten text and add elipse on blog roll
 	
 	$('.post-item p').each(function() {

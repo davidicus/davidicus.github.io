@@ -5,7 +5,7 @@
     <ul>
         <li><a href='{{ site.url }}/articles' class='navLinks'>Home</a></li>
         <li class="catMenu">
-        	<a href='{{ site.url }}/articles' class='navLinks catLink'>Catagories</a>
+        	<a href='#' class='navLinks catLink' onclick="return false;">Catagories</a>
         	<ul class="cats">
         		{% for cat in site.categories %}
 	            	<li><a href="/articles/{{ cat[0] }}">{{ cat[0] }}</a></li>

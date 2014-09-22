@@ -3,7 +3,7 @@ layout: post
 title:  "My Test Post"
 date:   August 21, 2014
 author: David Conner
-categories: web-design javascript jQuery
+categories: web-design javascript 
 permalink: /articles/sass
 image: blog1.jpg
 ---

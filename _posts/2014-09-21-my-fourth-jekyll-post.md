@@ -3,8 +3,9 @@ layout: post
 title:  "Fourth Test Post"
 date:   September 21, 2014
 author: David Conner
-categories: web-design Sass
-permalink: /articles/javascript/four-score
+categories: web-design sass
+series: web-design Sass
+permalink: /articles/web-design/four-score
 image: blog4.jpg
 ---
 

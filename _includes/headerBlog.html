@@ -1,3 +1,5 @@
+
+
 <!-- mainNav -->        
 <nav class='headerNav blogNav' id='mainNav'>
     <ul>
@@ -6,7 +8,7 @@
         	<a href='{{ site.url }}/articles' class='navLinks catLink'>Catagories</a>
         	<ul class="cats">
         		{% for cat in site.categories %}
-	            	<li><a href="/blog/{{ cat[0] }}">{{ cat[0] }}</a></li>
+	            	<li><a href="/articles/{{ cat[0] }}">{{ cat[0] }}</a></li>
 	          	{% endfor %}
         	</ul>
         </li>

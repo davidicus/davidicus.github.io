@@ -7,8 +7,8 @@ layout: blog
 
     <section class="post-content">
       <ul class="post-roll">
-        {% for post in site.posts %}
-          <li class="post-item">
+      	{% for post in site.categories.web-design %}
+      		<li class="post-item">
             <a class="post-title" href="{{ post.url | prepend: site.baseurl }}">
               <span class="post-img"><img src="/assets/{{ post.image }}"></span>
               <h3>{{ post.title }}</h3>

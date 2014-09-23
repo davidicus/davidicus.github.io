@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Second Test Post"
+title:  "The wondeful world of static site generators"
 html_title: second Test Post
 date:   September 18, 2014
 author: David Conner

@@ -1,14 +1,14 @@
 ---
 layout: post
 title:  "My First Post"
-html_title: My First Post
+html_title: Web Designer & Developer
 date:   August 21, 2014
 author: David Conner
 categories: web-design
-permalink: /articles/web-design
-image: blog1.jpg
+permalink: /articles/web-design/My-First-Post
+image: my-first-post.jpg
 ---
 
 
 
-The quick brown fox jumps over the lazy dog. This is totes different. We were finally allowed to redesign the company site at LeadFlash. Like most corporate site redesigns there were a lot of opinions flying around the board room. The end result was a compromise of executive taste,departmental needs and design aesthetics that I am pretty happy with. We now have an up-to-date, responsive site that is representative of our standing in the industry. The before and after say it all.
+Finally, I've done it! After years of telling myself that I need to redesign my site I have finally complied and released the new site this morning. I love the way it looks but what I'm most excited about is the new blog. This will allow me an outlet to express my passion for web design and the internet in general. We will dive into new programming languages, cool tutorials, best pratices, and all things web design. I can't wait!  If anyone has any ideas for an article or if you would like to do a guest post [let me know](mailto:david@david-conner.com). In the meantime my first article is going to get into the nitty gritty of Jekyll, the static site generator that powers this blog. 

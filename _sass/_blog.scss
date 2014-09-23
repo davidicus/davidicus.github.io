@@ -131,3 +131,15 @@
 		width: 100%;
 	}
 }
+
+.banner {
+	display: none;
+	text-align: center;
+	width: 100%;
+
+	@include bp(medium) {
+		display: block;
+	}
+
+	a { display: block; }
+}

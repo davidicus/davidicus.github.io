@@ -129,7 +129,7 @@
 }
 
 //transition vender prefix
-@mixin single-trans($what, $sec, $ease, $delay: 0) {
+@mixin single-trans($what, $sec, $ease, $delay: null) {
 	-webkit-transition: $what $sec $ease $delay;
 	-moz-transition: $what $sec $ease $delay;
 	transition: $what $sec $ease $delay;

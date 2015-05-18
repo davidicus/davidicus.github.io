@@ -43,6 +43,7 @@ img {
 	position: relative;
 	width: 100%;
 	padding: 1.25em;
+	table-layout: fixed;
 	@include bp(medium) { padding: 2.25em; }
 
 	@media (max-height: 400px) {
